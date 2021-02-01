@@ -1,9 +1,12 @@
 ///Dynamic array
-import java.util.*;
+
+import java.util.Scanner;
 public class CallArray {
     public static void main (String args[]){
         Scanner input = new Scanner(System.in);
         DynamicArray str = new DynamicArray();
+        int length=0;
+        // int length=0;
         while (true)
         {
             System.out.println("Enter 1 for input 2 for break : ");
@@ -11,24 +14,22 @@ public class CallArray {
             if (i==1){
                 String arr = input.next();
                 str.add(arr);
+                length++;
             }
             else if (i==2)
             {
                 break;
             }
         }
-        System.out.println("Your array size is : "+(str.getSize()-1));
-        System.out.print(" [ ");
-        for (int i=0;i< str.getSize()-1;i++)
-        {
-            System.out.print(" "+str.get(i));
-        }
-        str.add(2,"bmhh");
-        System.out.print(" ] ");
+        System.out.println("Your array size is : "+length);
+        str.printString(str, length);
+        //str.add(2,"bmhh");
+        str.put(11,"hyhyh");
         System.out.println();
-        for (int i=0;i< str.getSize()-1;i++)
-        {
-            System.out.print(" "+str.get(i));
-        }
+        str.printString(str,length+1);
+        System.out.println();
+        str.remove("hyhyh");
+        str.printString(str,length);
+        //System.out.println(" String size is +"+str.getSize());
     }
 }
