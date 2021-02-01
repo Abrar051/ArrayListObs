@@ -2,25 +2,22 @@ package generic;
 import java.util.*;
 public class Container<T> {
 
-    T value;
-    public void show() {
-        System.out.println(value.getClass().getName());
-    }
+
     public void compare (T obj1 ,T obj2)
     {
-        boolean f2;
         String s1 = obj1.toString();
         String s2 = obj2.toString();
-        f2=s1.equals(s2);
-        if (f2==true)
+        if (s1.length()>s2.length())
         {
-            System.out.println("Both strings are same");
+            System.out.println("Object 1 is greater than object 2");
         }
-        else if (f2==false)
+        else if (s1.length()<s2.length())
         {
-            System.out.println("They are not equal");
-            System.out.println(s1);
-            System.out.println(s2);
+            System.out.println("Object 1 is less than object 2 ");
+        }
+        else if (s1.length()==s2.length())
+        {
+            System.out.println("Both objects are equal");
         }
     }
 }
