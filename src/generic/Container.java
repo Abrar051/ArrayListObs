@@ -1,9 +1,9 @@
 package generic;
 import java.util.*;
-public class Container<T> {
+public class Container {
 
 
-    public void compare (T obj1 ,T obj2)
+    public void compare (Object obj1 ,Object obj2)
     {
         String s1 = obj1.toString();
         String s2 = obj2.toString();
